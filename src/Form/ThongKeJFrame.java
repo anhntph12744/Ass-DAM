@@ -178,6 +178,11 @@ fillComboBoxNam();
                 cboKhoaHocItemStateChanged(evt);
             }
         });
+        cboKhoaHoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cboKhoaHocMouseClicked(evt);
+            }
+        });
         cboKhoaHoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboKhoaHocActionPerformed(evt);
@@ -258,6 +263,11 @@ fillComboBoxNam();
         jLabel3.setText("Năm");
 
         cboNam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cboNam.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cboNamMouseClicked(evt);
+            }
+        });
         cboNam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboNamActionPerformed(evt);
@@ -334,7 +344,7 @@ fillComboBoxNam();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cboKhoaHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboKhoaHocActionPerformed
-
+    
     }//GEN-LAST:event_cboKhoaHocActionPerformed
 
     private void cboNamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboNamActionPerformed
@@ -343,8 +353,16 @@ fillComboBoxNam();
 
     private void cboKhoaHocItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cboKhoaHocItemStateChanged
         
-//            fillTableDoanhThu();
+//   
     }//GEN-LAST:event_cboKhoaHocItemStateChanged
+
+    private void cboKhoaHocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboKhoaHocMouseClicked
+        fillTableBangDiem();
+    }//GEN-LAST:event_cboKhoaHocMouseClicked
+
+    private void cboNamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboNamMouseClicked
+        fillTableDoanhThu();
+    }//GEN-LAST:event_cboNamMouseClicked
 
     /**
      * @param args the command line arguments
